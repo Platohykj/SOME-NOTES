@@ -3,6 +3,59 @@
 
 ***HTML十分简单,是八股文喵***
 
+# 第零章——前端技术浅谈
+
+
+>***前端开发是创建WEB页面或APP界面呈现给用户的过程，通过HTML、CSS以及JavaScript以及衍生出来的各种技术、框架、解决方案，来实现互联网产品的用户界面交互。***
+
+>***前端开发的基本技术***
+
+|HTML|CSS|JavaScript|
+|-------|-----|-------|
+|结构层|表示层|行为层|
+
+>***衍生技术***
+
+- **TypeScript**
+- **Vue.js**
+- **Node.js**
+- **AJAX**
+
+>***前端与后端的关系***
+
+- ***后端***
+	- **在后台发生的各种进行工作的逻辑,又称"服务器端"**
+
+- ***web系统的简要实现逻辑***
+	- **前端网页通过与用户交互,在用户处获取请求.**
+	- **前端系统向后端(服务器端)发出请求***
+	- **服务器端对请求进行处理**
+	- **服务器向前端响应请求**
+	- **通过前端系统,回答在浏览器上呈现,完成交互**
+	- **实现功能**
+
+- ***web系统的具体实现***
+	- **导航-用户输入url-点击链接-提交表单**
+	- **导航到某地址-HTML-定位某IP为服务器**
+	- **如果没有访问过-DNS查询-IP地址(可缓存)**      ***(DNS缓存)***
+	- **获取IP地址-TCP三次握手-与服务器建立链接**
+	- **发送HTTP请求-按照HTTP协议组装数据,按TCP/IP协议将HTTP协议格式的数据发送到服务器端**
+	- **接受HTTP响应-按照HTTP协议组装数据,按TCP/IP协议将HTTP协议格式的数据传回浏览器**
+	- **接收后解析HTML文件,构建DOM树-进行渲染**
+	- **遇到Script,下载并解析,执行命令对DOM和CSSOM进行操作**
+
+- ***浏览器渲染过程浅析***
+	- ![[{EDB8EE10-8CA9-4c01-9AE8-87B1F6A2B654}.png]]
+	- ***如图***
+	- **将HTML以及CSS分别解析为DOM树和CSSOM树![[{7E84BAED-5D1D-4d37-A090-3BDCBC33ACC6}.png]]**
+	- **将DOM树和CSSOM树合并为渲染树**
+	- **绘制渲染树**
+	- DISPLAY
+
+
+
+
+***
 # 第一章——HTML环境配置    
 ## 1.1 软件准备
 >以下软件择其一安装
@@ -124,7 +177,7 @@
 
 ***即网页主体中链接属性可以被重新定义,若不重新定义,默认使用`<base>`所定义的链接属性***
 
-### 3.1.4HTML`<link>`元素
+### 3.1.4 HTML`<link>`元素
 - 本***HTML***笔记不对其进行过多阐述
 
 >**本标签定义了文档与外部资源的关系**
@@ -136,7 +189,7 @@
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 ~~~
-### 3.1.5HTML`<style>`元素
+### 3.1.5 HTML`<style>`元素
 
 ***本元素全局控制页面的样式***
 ***样式文件通常用CSS完成***
@@ -156,7 +209,7 @@ p {
 </style>
 </head>
 ~~~
-### 3.1.6HTML`<mata>`元素
+### 3.1.6 HTML`<mata>`元素
 
 >***本标签描述了一些基本的元数据***
 >***在客户端中`<mata>`元素所定义的元数据不会被显示,但会作为网页的属性被浏览器解析***
@@ -231,7 +284,7 @@ p {
 		***声明[MIME类型](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)和文档的字符编码***
 		
 		***与`charset`属性类似***
-		***`content-type`属性的值同样必须是`text/html; charset=UTF-8`
+		***`content-type`属性的值同样必须是`text/html; charset=UTF-8`***
 		
 		~~~
 		<mata http-equive="content-type" content="text/html; charset=UTF-8" />
@@ -255,7 +308,7 @@ p {
 		~~~
 	- `refresh`
 		- ***`content`包含非负整数时——页面重新加载的秒数***
-		- ***`content`包含非负整数后跟字符串`;url=`时——页面重定向到指定链接的秒数
+		- ***`content`包含非负整数后跟字符串`;url=`时——页面重定向到指定链接的秒数***
 		~~~
 		<!-- 3喵后刷新 -->
 		<meta http-equiv="refresh" content="3" />
@@ -271,10 +324,39 @@ p {
 ***
 
 
-### 3.1.7HTML`<stript>`元素
+### 3.1.7 HTML`<stript>`元素
 
 >***该标签用于加载脚本文件,如JavaStript***
 >
 >***关于具体使用,在以后的章节进行阐述***
 
-## 3.2
+***
+
+
+## 3.2代码主体基础
+
+### 3.2.1 HTML`<body>`元素
+
+>***`<body>`标签定义了HTML代码主体内容***
+
+- **代码示例**
+~~~
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+	<!-- 在这里键入网页主体 -->
+</body>
+</html>
+
+~~~
+
+>***通常的,我们在`<body>`标签内编辑HTML代码主体从而通过浏览器进行渲染***
+
+
+
