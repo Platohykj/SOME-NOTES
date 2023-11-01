@@ -419,6 +419,13 @@ p {
 <h2>这是一个标题</h2>
 <h3>这是一个标题</h3>
 ~~~
+
+>***其中`<h1>`定义了最大的标题,`<h2>`定义了最小的标题***
+
+- 注意
+>请确保***HTML标题标签仅用于标题***,不要仅仅为了生成粗体或大号的文本使用标题
+>搜索引擎使用***标题***为你的网页结构编制索引
+>***标题是呈现文章结构的重要标签,请务必合理使用标题***
 #### 3.2.2.2 HTML`<p>`元素
 
 >***该元素定义了网页的段落***
@@ -429,7 +436,16 @@ p {
 <p>这是一个段落。</p>
 <p>这是另外一个段落。</p>
 ~~~
+- ***HTML`<br>`标签***
+>***该元素在你不希望产生鑫段落的情况下进行换行***
 
+- ***HTML`<hr>`标签***
+>***该元素在HTML页面中创建水平线***
+
+- ***HTML注释***
+```
+<!-- 这是一个注释 -->
+```
 #### 3.2.2.3 HTML`<a>`元素
 
 >***该元素定义了网页中某文本执行的跳转链接***
@@ -439,6 +455,38 @@ p {
 ~~~
 <a href="https://www.runoob.com">这是一个链接</a>
 ~~~
+
+>***HTML链接语法***
+- `href`***指定链接的URL,可以是网页链接、文件的链接或其他资源的链接***
+```
+<a href="url">链接文本</a>
+```
+- `target`***指定链接如何在浏览器打开***
+	- `_blank`***在新标签或窗口中打开链接***
+	```
+	<a href="http://www.runoob.com" target="_blank">访问菜鸟教程！</a>
+	```
+	- `_self`***在当前标签或窗口中打开链接***
+	- `_parent`***在父框架集中打开被链接文档***
+	- `_top`***在整个窗口中打开被链接文档。***
+	- `frame name`***在指定的框架中打开被链接文档***
+	```
+	<frameset cols="100,*">
+  <frame src="toc.html">
+  <frame src="pref.html" name="view_frame">
+  </frameset>
+
+
+	<h3>Table of Contents</h3>
+	<ul>
+  <li><a href="pref.html" ==target="view_frame"==>Preface</a></li>
+  <li><a href="chap1.html" ==target="view_frame"==>Chapter 1</a></li>
+  <li><a href="chap2.html" ==target="view_frame"==>Chapter 2</a></li>
+  <li><a href="chap3.html" ==target="view_frame"==>Chapter 3</a></li>
+	</ul>
+	```
+- `title`***提供对链接的额外信息,鼠标悬停在链接上显示提示***]     
+- `rel`***指定与链接目标的关系***
 
 #### 3.2.2.4 HTML`<img>`元素
 
@@ -450,3 +498,4 @@ p {
 <img decoding="async" src="/images/logo.png" width="258" height="39" />
 ~~~
 
+### 3.2.3 HTML文本格式化
